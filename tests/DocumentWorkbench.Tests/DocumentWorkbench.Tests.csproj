@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DocumentWorkbench\DocumentWorkbench.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- 本机构建环境的隐式 using 缺少 System.IO，这里显式补齐 -->
+    <Using Include="System.IO" />
+  </ItemGroup>
+
+</Project>
